@@ -1,0 +1,101 @@
+:root {
+	--white: #f4f7f5;
+	--black: #08090a;
+	--light-gray: #a7a2a9;
+	--dark-gray: #575a5e;
+	--green: #222823;
+	--dev-green: #2ecc71;
+}
+
+@font-face {
+	font-family: "league_spartanbold";
+	src: url(/font/LeagueSpartan-Bold.otf);
+}
+
+body {
+	background-color: var(--black);
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	font-family: league_spartanbold;
+	align-items: center;
+	justify-content: center;
+}
+
+#title {
+	color: var(--white);
+	font-size: 4rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+    display: flex;
+}
+
+#comment {
+	color: var(--dark-gray);
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: italic;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+
+#interest {
+	color: var(--dev-green);
+	font-family: consolas, sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+#changing-text {
+	border-right: solid var(--dev-green) 2px;
+}
+
+
+#name.animated {
+    animation: italicize 1s ease;
+}
+
+@keyframes italicize {
+    0% {
+        transform: skewX(0deg)
+    }
+    50% {
+        transform: skewX(-10deg)
+    }
+    100% {
+        transform: skewX(0deg)
+    }
+}
+
+img {
+	width: 3vw;
+	height: 3vw;
+	filter: invert(100%);
+}
+
+#buttons >  a{
+	margin-left: 5px;
+}
+
+
+
+#buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+}
